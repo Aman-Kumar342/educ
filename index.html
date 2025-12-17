@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educ - Education Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Educ</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search courses...">
+                <button id="searchBtn">🔍</button>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">🌙</button>
+                <button class="nav-toggle" id="navToggle">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Educ</h2>
+                <p>Your gateway to quality learning resources</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1500">0</span>
+                        <span class="stat-label">Students</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Courses</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="95">0</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                </div>
+                <button class="btn-primary">Get Started</button>
+            </div>
+        </section>
+
+        <section id="courses" class="courses-section">
+            <h2>Featured Courses</h2>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="programming">Programming</button>
+            </div>
+            <div class="courses-grid" id="coursesGrid">
+                <article class="course-card" data-category="web">
+                    <div class="course-img">📱</div>
+                    <div class="course-badge">Beginner</div>
+                    <h3>HTML & CSS Basics</h3>
+                    <p>Learn the fundamentals of web design</p>
+                    <div class="course-meta">
+                        <span>⏱️ 8 hours</span>
+                        <span>⭐ 4.8</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <button class="btn-secondary">Enroll Now</button>
+                </article>
+                <article class="course-card" data-category="programming">
+                    <div class="course-img">💻</div>
+                    <div class="course-badge">Intermediate</div>
+                    <h3>JavaScript Essentials</h3>
+                    <p>Master interactive web development</p>
+                    <div class="course-meta">
+                        <span>⏱️ 12 hours</span>
+                        <span>⭐ 4.9</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <button class="btn-secondary">Enroll Now</button>
+                </article>
+                <article class="course-card" data-category="design">
+                    <div class="course-img">🎨</div>
+                    <div class="course-badge">Intermediate</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Create beautiful user experiences</p>
+                    <div class="course-meta">
+                        <span>⏱️ 10 hours</span>
+                        <span>⭐ 4.7</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <button class="btn-secondary">Enroll Now</button>
+                </article>
+                <article class="course-card" data-category="web">
+                    <div class="course-img">⚛️</div>
+                    <div class="course-badge">Advanced</div>
+                    <h3>Responsive Design</h3>
+                    <p>Build mobile-friendly websites</p>
+                    <div class="course-meta">
+                        <span>⏱️ 6 hours</span>
+                        <span>⭐ 4.8</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <button class="btn-secondary">Enroll Now</button>
+                </article>
+                <article class="course-card" data-category="programming">
+                    <div class="course-img">🐍</div>
+                    <div class="course-badge">Beginner</div>
+                    <h3>Python Programming</h3>
+                    <p>Start your coding journey</p>
+                    <div class="course-meta">
+                        <span>⏱️ 15 hours</span>
+                        <span>⭐ 4.9</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <button class="btn-secondary">Enroll Now</button>
+                </article>
+                <article class="course-card" data-category="design">
+                    <div class="course-img">✨</div>
+                    <div class="course-badge">Beginner</div>
+                    <h3>Graphic Design</h3>
+                    <p>Visual communication essentials</p>
+                    <div class="course-meta">
+                        <span>⏱️ 9 hours</span>
+                        <span>⭐ 4.6</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <button class="btn-secondary">Enroll Now</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>Why Choose Educ?</h2>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from industry professionals with years of experience</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Learn Anywhere</h3>
+                    <p>Access courses on any device, anytime, anywhere</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Certificates</h3>
+                    <p>Earn recognized certificates upon course completion</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>Career Support</h3>
+                    <p>Get guidance and resources for your career growth</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="resources" class="resources-section">
+            <h2>Learning Resources</h2>
+            <div class="resources-grid">
+                <article class="resource-card" data-resource="materials">
+                    <h3>📚 Study Materials</h3>
+                    <p>Access comprehensive study guides and notes</p>
+                    <button class="resource-btn">Explore</button>
+                </article>
+                <article class="resource-card" data-resource="videos">
+                    <h3>🎥 Video Tutorials</h3>
+                    <p>Watch step-by-step video lessons</p>
+                    <button class="resource-btn">Explore</button>
+                </article>
+                <article class="resource-card" data-resource="tests">
+                    <h3>📝 Practice Tests</h3>
+                    <p>Test your knowledge with quizzes</p>
+                    <button class="resource-btn">Explore</button>
+                </article>
+                <article class="resource-card" data-resource="community">
+                    <h3>💬 Community</h3>
+                    <p>Connect with fellow learners</p>
+                    <button class="resource-btn">Explore</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <h2>Student Success Stories</h2>
+            <div class="testimonials-container">
+                <article class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Educ transformed my career! The courses are well-structured and easy to follow."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>Web Developer</span>
+                    </div>
+                </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Best online learning platform I've used. The instructors are knowledgeable and supportive."</p>
+                    <div class="testimonial-author">
+                        <strong>Michael Chen</strong>
+                        <span>UI/UX Designer</span>
+                    </div>
+                </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"I went from beginner to confident developer in just 6 months. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <strong>Priya Patel</strong>
+                        <span>Software Engineer</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+            <div class="form-success" id="formSuccess">Thank you! Your message has been sent.</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Educ</h3>
+                <p>Empowering students with quality education and resources.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Stay updated with our latest courses</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Educ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
