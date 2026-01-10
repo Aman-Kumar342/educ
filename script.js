@@ -1,7 +1,38 @@
 // ==================== INITIALIZATION ====================
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadPartials();
     initializeApp();
 });
+
+async function loadPartials() {
+    const partialMap = {
+        header: 'partials/header.html',
+        hero: 'partials/hero.html',
+        courses: 'partials/courses.html',
+        about: 'partials/about.html',
+        resources: 'partials/resources.html',
+        testimonials: 'partials/testimonials.html',
+        contact: 'partials/contact.html',
+        footer: 'partials/footer.html',
+        'scroll-top': 'partials/scroll-top.html'
+    };
+
+    const containers = Array.from(document.querySelectorAll('[data-partial]'));
+
+    await Promise.all(containers.map(async (container) => {
+        const key = container.getAttribute('data-partial');
+        const path = partialMap[key];
+        if (!path) return;
+
+        try {
+            const response = await fetch(path);
+            const html = await response.text();
+            container.innerHTML = html;
+        } catch (error) {
+            console.error(`Failed to load partial: ${key}`, error);
+        }
+    }));
+}
 
 function initializeApp() {
     initNavigation();
